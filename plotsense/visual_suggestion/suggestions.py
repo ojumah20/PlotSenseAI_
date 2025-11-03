@@ -69,7 +69,7 @@ class VisualizationRecommender:
     def _validate_keys(self):
         """Validate that required API keys are present"""
         service_links = {
-            'groq': '👉 https://console.groq.com/keys 👈'
+            'groq': ' https://console.groq.com/keys '
         }
         
         for service in ['groq']:
@@ -106,8 +106,6 @@ class VisualizationRecommender:
         self.available_models = []
         for provider, client in self.clients.items():
             if client and provider in self.DEFAULT_MODELS:
-                # For now we'll assume all DEFAULT_MODELS are available
-                # In a real implementation, you might want to check which models are actually available
                 self.available_models.extend([m[0] for m in self.DEFAULT_MODELS[provider]])
         
         if self.debug:
