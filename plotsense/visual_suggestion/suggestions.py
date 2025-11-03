@@ -7,10 +7,6 @@ import numpy as np
 import warnings
 import concurrent.futures
 from concurrent.futures import ThreadPoolExecutor
-import textwrap
-import builtins
-from pprint import pprint
-from groq import Groq
 
 
 load_dotenv()
@@ -23,6 +19,11 @@ class VisualizationRecommender:
             ('llama-3.3-70b-versatile', 0.5)
         ],
     }
+
+import textwrap
+import builtins
+from pprint import pprint
+from groq import Groq
 
     def __init__(self, api_keys: Optional[Dict[str, str]] = None, timeout: int = 30, interactive: bool = True, debug: bool = False):
         """
