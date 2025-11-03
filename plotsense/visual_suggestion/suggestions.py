@@ -22,7 +22,6 @@ class VisualizationRecommender:
             ('llama-3.1-8b-instant', 0.5),
             ('llama-3.3-70b-versatile', 0.5)
         ],
-        # Add other providers here
     }
 
     def __init__(self, api_keys: Optional[Dict[str, str]] = None, timeout: int = 30, interactive: bool = True, debug: bool = False):
